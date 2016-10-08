@@ -284,11 +284,9 @@ case "$1" in
 		exit 0
 		;;
 	FS|fs)
-		for name in slimjet; do
-			export name
-			prepath="$XDG_CONFIG_HOME"/$name
-			[[ -d "$XDG_CONFIG_HOME"/$name ]] && do_chromebased
-		done
+		name="slimjet"; export name
+		prepath="$XDG_CONFIG_HOME"/$name
+		[[ -d "$XDG_CONFIG_HOME"/$name ]] && do_chromebased
 		exit 0
 		;;
 	Q|q)
